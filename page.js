@@ -7,6 +7,15 @@ function mapGetElementById(id, map) {
 	}
 }
 
+function mapGetElementsByClass(cls, map) {
+	var x = document.getElementsByClassName(cls);
+	if (x !== null) {
+		for (elt of x) {
+			map(elt);
+		}
+	}
+}
+
 function setDarkMode() {
 	const dark = urlParams.get('dark') == '1';
 
@@ -27,13 +36,14 @@ function setDarkMode() {
 			}
 		}
 	});
-	mapGetElementById('return', x => { 
+	mapGetElementsByClass('return', x => { 
 		x.href = x.href.split('?')[0] + document.location.search;
 		x.style.color = dark? '#559' : '#33d';
 	});
 	mapGetElementById('setting-darkmode', x => { x.style.display = dark? 'none' : '' });
 	mapGetElementById('setting-lightmode', x => { x.style.display = dark? '' : 'none' });
 	mapGetElementById('menu', x => { x.style.backgroundColor = dark? '#aaaaaa19' : '#bbb5' });
+	mapGetElementById('footer', x => { x.style.backgroundColor = dark? '#aaaaaa19' : '#bbb5' });
 }
 
 window.onload = () => setDarkMode()

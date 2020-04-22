@@ -14,10 +14,14 @@ def extract_post_metatdata(s):
 
 def process(s):
 	s = '\n'.join(line for line in s.split('\n') if not line.startswith('!'))
+	s = s.replace('\\\n', '')
+	
 	s = re.sub(r'#(\d)(.+?)(?:\n|$)', r'<h\1>\2</h\1>', s)
-	s = re.sub(r'\[([^\s(]+)(?:\(([^)]+?)\))?(?:\s)*([^\]]+?)\]', r'<\1 \2>\3</\1>', s)
+	s = re.sub(r'\[([^\s(]+)(?:\(([^)]+?)\))?(?:\s)*([^\]]*?)\]', r'<\1 \2>\3</\1>', s)
+	s = re.sub(r'(\n|^)> ([^\n]+)(?:\n)?', r'\1<div class="boxed">\2</div>', s)
+
 	s = s.replace('\n\n', '<p class="vspace"></p>')
-	s = s.replace('\\\n', '').replace('\n', '<br />')
+	s = s.replace('\n', '<br />')
 	return s
 
 def add_boilerplate(cont, meta):

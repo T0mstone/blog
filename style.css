@@ -47,13 +47,19 @@ p .vspace {
 	color: #888;
 }
 
-.content, #menu {
+.boxed {
+	text-align: center;
+	background-color: #aaa6;
+	border-radius: 5px;
+}
+
+.content, #menu, #footer {
 	text-align: center;
 	max-width: 600px;
 	margin: auto;
 }
 
-#menu {
+#menu, #footer {
 	padding-top: 5pt;
 	padding-bottom: 5pt;
 	margin-bottom: 5pt;
