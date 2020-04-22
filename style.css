@@ -1,3 +1,30 @@
+body {
+	background-color: #ded;
+}
+
+.title {
+	margin-bottom: 2em;
+}
+
+.title h2 {
+	text-align: center;
+	text-decoration: underline;
+	font-size: 20pt;
+	/*line-height: 1pt;*/
+	margin-bottom: 5pt;
+}
+
+.title h1 {
+	text-align: center;
+	text-decoration: underline;
+	font-size: 35pt;
+	line-height: 10pt;
+}
+
 .faint {
-	color: #aaa;
+	color: #888;
+}
+
+.content {
+	text-align: center;
 }
