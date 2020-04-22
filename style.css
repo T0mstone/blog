@@ -2,6 +2,14 @@ body {
 	background-color: #ded;
 }
 
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
 p .vspace {
 	height: 1em;
 	max-height: 1em;
@@ -14,12 +22,7 @@ p .vspace {
 }
 
 #posts a {
-	text-decoration: none;
 	color: #000;
-}
-
-#posts a:hover {
-	text-decoration: underline;
 }
 
 .title {
