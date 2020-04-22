@@ -1,6 +1,6 @@
 The first post -- A small step for mankind, one giant leap for a man
 This is my first blog post. Today I had the idea "hey, I could write a blog."
-I'd like to thank GitHub for making GitHub Pages free to use. It is such a great thing to have your own\
+I'd like to thank GitHub for making GitHub Pages free to use. It is such a great thing to have your own \
 website, free of charge! 
 I will be improving this blog in the future and there will be more content \
 (I'm planning on releasing some educational content here).
