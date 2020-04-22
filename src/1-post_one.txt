@@ -1,4 +1,7 @@
-The first post -- A small step for mankind, one giant leap for a man
+!n 1
+!title The first post
+!subtitle A small step for mankind, one giant leap for a man
+!lang en
 This is my first blog post. Today I had the idea "hey, I could write a blog."
 I'd like to thank GitHub for making GitHub Pages free to use. It is such a great thing to have your own \
 website, free of charge! 

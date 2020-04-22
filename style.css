@@ -2,6 +2,21 @@ body {
 	background-color: #ded;
 }
 
+#posts {
+	display: block;
+	margin: auto;
+	width: max-content;
+}
+
+#posts a {
+	text-decoration: none;
+	color: #000;
+}
+
+#posts a:hover {
+	text-decoration: underline;
+}
+
 .title {
 	margin-bottom: 2em;
 }
