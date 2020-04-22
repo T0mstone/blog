@@ -1,4 +1,4 @@
-import sys
+import random
 from pathlib import Path
 
 def process(s):
@@ -43,7 +43,12 @@ def make_hub():
 		return template.replace('%quote', quote).replace('%posts', post_str)
 
 	posts = [(path.stem + '.html', split_post_src(path.read_text())[0]) for path in list_post_srcs()]
-	quote = Path('quote.txt').read_text()
+	quotes = Path('quotes.txt').read_text().split('\n')
+	selected_quotes = [line[2:] for line in quotes if line.startswith('> ')]
+	if len(selected_quotes) == 0:
+		quote = quotes[random.randrange(len(quotes))]
+	else:
+		quote = selected_quotes[0]
 	with open('src/index_src.html', 'r') as f:
 		template = f.read()
 	return inner(template, quote, posts)
