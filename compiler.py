@@ -1,4 +1,5 @@
 import random
+import re
 from pathlib import Path
 
 def maybe_get(d, k):
@@ -13,6 +14,9 @@ def extract_post_metatdata(s):
 
 def process(s):
 	s = '\n'.join(line for line in s.split('\n') if not line.startswith('!'))
+	s = re.sub(r'#(\d)(.+?)(?:\n|$)', r'<h\1>\2</h\1>', s)
+	s = re.sub(r'\[([^\s(]+)(?:\(([^)]+?)\))?(?:\s)*([^\]]+?)\]', r'<\1 \2>\3</\1>', s)
+	s = s.replace('\n\n', '<p class="vspace"></p>')
 	s = s.replace('\\\n', '').replace('\n', '<br />')
 	return s
 
@@ -25,25 +29,14 @@ def add_boilerplate(cont, meta):
 	tabtitle = maybe_get(meta, 'tabtitle')
 
 	subtitle = "" if subtitle is None else f"\n{indent1}<center class=\"faint\">\n{indent2}{subtitle}\n{indent1}</center>"
-	return f"""<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8" />
-	<title> {title if tabtitle is None else tabtitle} - Tom's Blog</title>
-	<link rel="stylesheet" type="text/css" href="../style.css">
-</head>
-<body>
-	<div class="title">
-		<h2>{title}</h2>{subtitle}
-	</div>
-	<div class="content">
-		{cont}
-	</div>
-</body>
-</html>"""
+	template = open('post_src.html', 'r').read()
+	return template.replace('%tabtitle', title if tabtitle is None else tabtitle) \
+		.replace('%title', title) \
+		.replace('%subtitle', subtitle) \
+		.replace('%content', cont)
 
-def list_post_srcs():
-	return [path for path in Path('src').iterdir() if path.name != '.DS_Store']
+def list_post_srcs(include_unfinished=False):
+	return [path for path in Path('src').iterdir() if path.name != '.DS_Store' and (include_unfinished or not path.name.startswith('_'))]
 
 def make_hub():
 	def make_entry(filename, meta):
@@ -78,7 +71,7 @@ def get_flag(code):
 	return ''.join([chr(code_a + ord(c) - ord('a')) for c in code])
 
 def main():
-	for path in list_post_srcs():
+	for path in list_post_srcs(include_unfinished=True):
 		print(f'compiling {path.name}...')
 		text = path.read_text()
 		meta = extract_post_metatdata(text)
