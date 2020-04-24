@@ -12,13 +12,18 @@ def extract_post_metatdata(s):
 
 	return dict(inner(line[1:]) for line in s.split('\n') if line.startswith('!'))
 
-def process(s):
-	s = '\n'.join(line for line in s.split('\n') if not line.startswith('!'))
+def process(s, img_root):
+	img_root = "." if img_root is None else img_root
+
+	s = '\n'.join(line for line in s.split('\n') if not line.startswith('!') and not line.startswith(';'))
 	s = s.replace('\\\n', '')
+
+	# TODO: RIIR, this regex gibberish is getting out of hand
 	
 	s = re.sub(r'#(\d)(.+?)(?:\n|$)', r'<h\1>\2</h\1>', s)
 	s = re.sub(r'\[([^\s(]+)(?:\(([^)]+?)\))?(?:\s)*([^\]]*?)\]', r'<\1 \2>\3</\1>', s)
 	s = re.sub(r'(\n|^)> ([^\n]+)(?:\n)?', r'\1<div class="boxed">\2</div>', s)
+	s = re.sub(r'@img(?:\(([^)]*?)\))?\s*([^\s]+)\s+([^\s]+)\s+(.+?)(?:\n|$)', rf'<img \1 src="../res/{img_root}/\4" width="\2" height="\3"></img>', s)
 
 	s = s.replace('\n\n', '<p class="vspace"></p>')
 	s = s.replace('\n', '<br />')
@@ -83,7 +88,7 @@ def main():
 			if k not in meta:
 				print(f'"{path.stem}" is missing a {e}')
 				continue
-		res = add_boilerplate(process(text), meta)
+		res = add_boilerplate(process(text, maybe_get(meta, 'img_root')), meta)
 		filename = path.stem + '.html'
 		path2 = Path('post') / filename
 		path2.write_text(res)
