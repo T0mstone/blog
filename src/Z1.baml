@@ -3,6 +3,7 @@
 !title Die Mathematik der Zahlen (#1)
 !subtitle "Mache die Dinge so einfach wie möglich - aber nicht einfacher." ~ Albert Einstein
 !tabtitle Zahlen #1
+# das tut im moment nichts. Erst mit dem nächsten BAML-Update werde ich es implementieren
 !img_root Z1-gfx
 Zahlen entstanden vor langer Zeit, um Dinge zu zählen.
 Ein Stein, zwei Steine, drei Steine. Solche Zahlen nennt man [b Kardinalzahlen].
@@ -18,7 +19,7 @@ Wie man sieht, gibt es hierzu also keine eindeutige Antwort (wie das bei vielen 
 Ob Zahlen nun Ausgedacht sind oder nicht, wir können sie benutzen. Dafür müssen wir zwar wissen, \
 was Zahlen sind und welche es gibt, doch genau das werden wir jetzt lernen.
 
-#3 Die Natürlichen Zahlen<br />[span(style="font-weight: normal; font-size: 200%; margin-left:5pt") ℕ]
+.h3 Die Natürlichen Zahlen[br][span{style = font-weight: normal\; font-size: 200%perc\; margin-left:5pt} ℕ]
 Das Symbol ℕ steht für die "Gruppe" aller Kardinalzahlen (Zählzahlen). Hiermit kann man also Dinge zählen.
 Man kann sie aber auch als Ordinalzahlen interpretieren. Für Menschen ist dieses Umdenken ganz natürlich: \
 Aus 1 wird Platz 1 (der erste), aus 2 wird Platz 2, usw.
@@ -40,12 +41,12 @@ Tatsächlich kann praktisch alles in der Mathematik durch Mengen dargestellt wer
 Zurück zu den Zahlen. Wir haben uns um eine wichtige Zahl noch nicht gekümmert: die Null.
 Als Ordinalzahl ist eine Null völlig sinnfrei. Wie kann es einen Platz vor dem ersten Platz geben?
 Daher nimmt man sich die Kardinalzahlen zu Hilfe. Ich werde es in Form einer klassischen Schulaufgabe formulieren.
-> Karl fragt Peter: "Wie viele Kekse hast du noch übrig?" aber Peter hat schon alle gegessen. Was soll Peter antworten?
+.div{class = boxed} Karl fragt Peter: "Wie viele Kekse hast du noch übrig?" aber Peter hat schon alle gegessen. Was soll Peter antworten?
 Die Antwort ist: Null. Wer hätte das gedacht. Die Null steht für "nichts", also für eine nicht-Vorhandenheit des zu zählenden Objektes.
 Doch ist die Null nicht nur das. In unserem Zahlensystem (mehr dazu in einem späteren Post) hängt die Null auch eng mit der Zehn zusammen.
 Erst die Null am Ende von "10" macht die Eins zur Zehn.
 
-#3 Zählen und die größte Zahl
+.h3 Zählen und die größte Zahl
 Jedes Kind lernt in der Grundschule, wie man zählt. Eins, Zwei, Drei, usw.
 Beim Zählen geht man im Prinzip von jeder Zahl zu ihrer Nachfolgerzahl.
 Wenn man sich die Zahlen als Kardinalzahlen vorstellt, kann man sich die Nachfolgerzahl als "einen mehr" denken.
@@ -53,21 +54,21 @@ Mit Ordinalzahlen erklärt ist es jeweils der nächste Platz.
 
 Jetzt können wir also zählen. Eins, Zwei, Drei, Vier, man könnte ewig so weiter machen.
 Moment mal, [b ewig?] also [b für immer?] Erreicht man nicht irgendwann die [i größte Zahl]?
-[b(style = "font-size: 20pt") NEIN!]
+[b{style = font-size: 20pt} NEIN!]
 Eine "größte Zahl" hätte logischerweise keinen Nachfolger mehr.
 Und warum sollte eine Zahl keinen Nachfolger haben? Man kann doch immer noch ein Objekt dazu legen, egal wie viele man hat.
 Gäbe es eine größte Zahl, dann wäre es ja irgendwann physisch unmöglich, noch ein Objekt dazuzulegen.
 Weil das offensichtlich nicht der Fall ist, gibt es auch keine größte Zahl.
 
-#3 Addition
+.h3 Addition
 Die Addition / Das Addieren ([i ugs.] Plus-Rechnen) kann man sich als Zusammenlegen von Grüppchen vorstellen.
 Links drei Steine, rechts vier Steine. Schiebt man sie zusammen, liegen dort sieben Steine.
 Man kann Addition aber auch als wiederholtes Nachfolger-nehmen interpretieren: \
 Wie viel ist drei plus vier? Drei mal die Nachfolgerzahl von vier natürlich.
 Wenn wir "Die Nachfolgerzahl von" als "N" schreiben, ist es also:
-> NNN4 = NN5 = N6 = 7
+.div{class = boxed} NNN4 = NN5 = N6 = 7
 Das ist sehr explizit aber es stellt dar, wie Mathematiker die Addition definieren.
-> Nebenbei: "=" ist das Gleichzeichen. Was links und rechts von ihm steht muss immer den gleichen Wert haben.
+.div{class = boxed} Nebenbei: "=" ist das Gleichzeichen. Was links und rechts von ihm steht muss immer den gleichen Wert haben.
 
 Man schreibt für die Addition zweier Zahlen diese Zahlen nebeneinander, mit einem "+" dazwischen.
 
@@ -102,14 +103,14 @@ Dies gilt für alle Zahlen, nicht nur 1, 2 und 3. Darum kann man dann [b doch] "
 ja aufs Gleiche hinauslaufen.
 Intuitiv ist uns auch die Assoziativität leicht klar. Ob wir erst einen und dann drei oder erst drei und dann einen Stein dazulegen, am Ende haben wir vier dazugelegt.
 
-#3 Multiplikation
+.h3 Multiplikation
 Die Multiplikation / Das Multiplizieren ([i ugs.] Mal-Nehmen) ist nicht ganz so intuitiv, wie die Addition.
 Doch auch hier gibt es eine bildliche Vorstellung:
 Es geht wieder um Gruppen, doch anstatt zwei Gruppen verschiedener Größen zusammenzulegen, \
 legt man mehrere Gruppen der gleichen Größe zusammen.
 Drei mal Vier bedeutet also, drei Vierergruppen zusammenzulegen. Man erhält dann zwölf Objekte.
 Man kann Multiplikation auch als wiederholtes Addieren interpretieren. Hier ein Beispiel:
-> Was ist 3 mal 4? Es ist 4 + 4 + 4 (Drei Vieren), also 12.
+.div{class = boxed} Was ist 3 mal 4? Es ist 4 + 4 + 4 (Drei Vieren), also 12.
 
 Man schreibt für das multiplizieren zweier Zahlen diese Zahlen nebeneinander, mit einem Mal-Zeichen dazwischen.
 Es gibt mehrere Mal-Zeichen. In der Grundschule lernte Ich "⨯", später dann "•" und an Computern wird auch "*" geschrieben. Ich werde "•" verwenden.
@@ -130,57 +131,57 @@ Ein [b Produkt] ist bei der Multiplikation wie eine Summe bei der Addition. \
 Auch die Multiplikation ist Kommutativ. 
 Man kann sich dies (siehe Grafik) als ein Rechteck vorstellen, bei dem man sowohl die Reihen als auch die Spalten betrachten kann.
 
-; [img(src = "Z1-gfx/MulComm.png" width="600px")]
-@img 600px auto MulComm.png
-[div(style = "translate: 0pt -15pt") Grafik - Kommutativgesetz: 4 • 3 = 3 • 4]
+[img{src = ../res/Z1-gfx/MulComm.png; width=600px}]
+# @img 600px auto MulComm.png
+[div{style = translate: 0pt -15pt} Grafik - Kommutativgesetz: 4 • 3 = 3 • 4]
 
 Außerdem ist die Multiplikation auch Assoziativ.
 Dies lässt sich ähnlich in 3D darstellen, indem man einen Quader unterteilt (siehe Grafik)
 
-; [img(src = "Z1-gfx/MulAssoc1.png" width="600px")]
-; [img(src = "Z1-gfx/MulAssoc2.png" width="290px" style="margin-right: 10px; margin-left: 5px")]\
-; [img(src = "Z1-gfx/MulAssoc3.png" width="290px")]
-@img 600px auto MulAssoc1.png
-@img(style="margin-right: 10px; margin-left: 5px") 290px auto MulAssoc2.png
-@img 290px auto MulAssoc2.png
+[img{src = ../res/Z1-gfx/MulAssoc1.png; width=600px}]
+[img{src = ../res/Z1-gfx/MulAssoc2.png; width=290px; style=margin-right: 10px\; margin-left: 5px}]\
+[img{src = ../res/Z1-gfx/MulAssoc3.png; width=290px}]
+# @img 600px auto MulAssoc1.png
+# @img(style="margin-right: 10px; margin-left: 5px") 290px auto MulAssoc2.png
+# @img 290px auto MulAssoc2.png
 Grafik - Assoziativgesetz: (3 • 2) • 4 = 3 • (2 • 4) = 3 • 2 • 4
 
 Die Multiplikation hat auch noch eine dritte Eigenschaft.
 Sie ist [b Distributiv] über Addition.
 Das bedeutet, dass man einen Ausdruck mit Klammern wie folgt umformen kann.
-> 2 • (1 + 3) = (2 • 1) + (2 • 3)
+.div{class = boxed} 2 • (1 + 3) = (2 • 1) + (2 • 3)
 Wegen der Kommutativität gilt ja "2 • (1 + 3) = (1 + 3) • 2", daher funktioniert das natürlich auch von rechts.
 Ich habe es trotzdem noch einmal extra aufgeschrieben:
-> (1 + 3) • 2 = (1 • 2) + (3 • 2)
+.div{class = boxed} (1 + 3) • 2 = (1 • 2) + (3 • 2)
 Auch diese Eigenschaft liegt nicht an den Zahlen 1, 2 und 3. Auch dies geht mit allen Zahlen.
 
 Diese Regel wird anhand der folgenden Grafik illustriert
 
-; [img(src = "Z1-gfx/MulDist.png" width="600px")]
-@img 600px auto MulDist.png
+[img{src = ../res/Z1-gfx/MulDist.png; width=600px}]
+# @img 600px auto MulDist.png
 
-#3 Primzahlen und Zerlegung
+.h3 Primzahlen und Zerlegung
 Zahlen wie 4 können als Produkt geschrieben werden, ohne dabei die 1 oder die Zahl selbst zu verwenden: "4 = 2 • 2".
 Es gibt aber auch Zahlen, die das nicht können. Diese nennt man Primzahlen, mit einer Ausnahme: Die 1 zählt nicht als Primzahl.
 
 Viele Zahlen können auch als mehrere, verschiedene Produkte geschrieben werden. Wenn man alle auftauchenden Faktoren dieser Produkte für eine Zahl \
 auflistet, dann trägt diese Liste, oder eher alle Zahlen in ihr, einen besonderen Namen: Es handelt sich um die Faktoren der ursprünglichen Zahl.
-> Dass Mathematiker dasselbe Wort für verschiedene Dinge verwenden, geschieht immer mal wieder. \
+.div{class = boxed} Dass Mathematiker dasselbe Wort für verschiedene Dinge verwenden, geschieht immer mal wieder. \
 Aber in den meisten Fällen ist das nicht schlimm, da die verschiedenen Bedeutungen sehr eng beieinander liegen oder aber da es immer klar ist, \
 wovon gerade die Rede ist.
 Eine wichtige Eigenschaft von Faktoren, die wir schon bei der 4 gesehen haben, ist, dass jeder eine Häufigkeit hat. \
 Die Zwei ist [i zwei mal] ein Faktor der Vier. In manchen Fällen ist man nur dafür interessiert, [i welche] Zahlen Faktoren sind, \
 aber auch [i wie oft] diese Faktoren sind kann manchmal eine Rolle spielen.
-> Bemerke: Die Eins ist ein Faktor jeder Zahl (und das unendlich oft).
+.div{class = boxed} Bemerke: Die Eins ist ein Faktor jeder Zahl (und das unendlich oft).
 
 Faktoren einer Zahl, die selbst Primzahl sind, nennt man [b Primzahlfaktoren] oder [b Primfaktoren].
 Jede Zahl kann [b auf nur eine Weise] als Produkt aller ihrer Primfaktoren geschrieben werden.
-> Dieser Fakt ist, warum wir die Eins nicht als Primzahl bezeichnen. Man könnte dann nämlich so oft man will ein \
+.div{class = boxed} Dieser Fakt ist, warum wir die Eins nicht als Primzahl bezeichnen. Man könnte dann nämlich so oft man will ein \
 "1 •" vorne anhängen; Dann gäbe es also mehr als eine Weise, ein solches Produkt zu schreiben.
 Dieses Produkt wird als [b Primfaktorzerlegung] der Zahl bezeichnet
 Ein Beispiel haben wir oben schon gesehen. Die Zwei ist nämlich eine Primzahl und "4 = 2 • 2" ist die Primfaktorzerlegung der Vier.
 
-#3 Schlusswort
+.h3 Schlusswort
 Puh, das war ein ganz schöner Brocken. Aber jetzt sind wir durch.
 Ich hoffe, meine Erklärungen waren verständlich und möchte jedem Leser von ganzem Herzen fürs Lesen danken.
 Auf Wiedersehen und bis zum nächsten Mal, wo wir uns mit Anteilen und Brüchen befassen werden.

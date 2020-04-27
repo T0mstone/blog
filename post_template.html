@@ -2,16 +2,14 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>The first post - Tom's Blog</title>
+	<title>%alt(%{!tabtitle}:%{!title}) - Tom's Blog</title>
 	<link rel="stylesheet" type="text/css" href="../style.css">
 	<script type="text/javascript" src="../page.js"></script>
 </head>
 <body>
 	<div class="title">
-		<h2>The first post</h2>
-        <center class="faint">
-            A small step for mankind, one giant leap for a man
-        </center>
+		<h2>%{!title}</h2>
+		<center class="faint">%{!subtitle}</center>
 	</div>
 	<div id="menu">
 		<a class="return" href="../index.html" style="margin-right: 10pt">Return to index</a>
@@ -19,7 +17,7 @@
 		<a id="setting-darkmode" href="?dark=1" style="color: #33d">Dark Mode</a>
 	</div>
 	<div class="content">
-		This is my first blog post. Today I had the idea "hey, I could write a blog."<br />I'd like to thank GitHub for making GitHub Pages free to use. It is such a great thing to have your own website, free of charge! <br />I will be improving this blog in the future and there will be more content (I'm planning on releasing some educational content here).<br />For now though, that's it. <br />Thank you for reading and have a nice day.
+		%{content}
 	</div>
 	<div id="footer">
 		<a class="return" href="../index.html" style="margin-right: 10pt">Return to index</a>

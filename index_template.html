@@ -10,7 +10,7 @@
 	<div class="title">
 		<h1>Tom's Blog</h1>
 		<center class="faint">
-			%quote
+			%run(python get_quote.py)
 		</center>
 	</div>
 	<div id="menu">
@@ -19,7 +19,14 @@
 	</div>
 	<div>
 		<div id="posts">
-			%posts
+			%forfiles(with f:in src:exclude_name _*:include_name *.baml:sort_key %{!n}:sort_order -)%(
+				<p class="post-link">
+					[%run(python make_flag.py %{!lang})] (%{!n})
+					<a href="post/%setext(html:%{f})">
+						%{!title}
+					</a>
+				</p>
+			%)
 		</div>
 	</div>
 </body>

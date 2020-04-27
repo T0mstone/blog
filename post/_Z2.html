@@ -9,9 +9,7 @@
 <body>
 	<div class="title">
 		<h2>Die Mathematik der Zahlen (#2)</h2>
-        <center class="faint">
-            "Phantasie ist wichtiger als Wissen, denn Wissen ist begrenzt." ~  Albert Einstein
-        </center>
+		<center class="faint">"Phantasie ist wichtiger als Wissen, denn Wissen ist begrenzt." ~  Albert Einstein</center>
 	</div>
 	<div id="menu">
 		<a class="return" href="../index.html" style="margin-right: 10pt">Return to index</a>
@@ -19,7 +17,135 @@
 		<a id="setting-darkmode" href="?dark=1" style="color: #33d">Dark Mode</a>
 	</div>
 	<div class="content">
-		Letztes Mal haben wir alles (viel) über natürliche Zahlen, Nachfolger, Addition, Multiplikation und Primzahlen gelernt.<br />Nun wollen wir uns mit Zahlen befassen, die zwischen den natürlichen Zahlen liegen.<br />Meine Herangehensweise wird etwas anders sein als es in Schulen getan wird. Das hat damit zu tun, dass ich es so für besser halte.<br />Ich will noch eine Warnung aussprechen: Ich habe hierfür ein paar Schreibweisen erfunden. Ich werde natürlich auch die üblichen Schreibweisen einführen, aber das eben erst etwas später.<p class="vspace"></p><h3> Anteile</h3>Für diesen Abschnitt sind wir Pizzalieferanten eines eher unkonventionellen Pizzarestaurants.<br />Gehen wir davon aus, wir wollen eine Pizza auf eine bestimmte Zahl von Häusern verteilen, hier sind es als Beispiel fünf.<br />Wie soll das gehen? Wir haben ja nur eine Pizza. Da kommt unser Arbeitgeber ins Spiel. Die verkaufen nämlich Pizzen jeder erdenklichen Größe, also auch einzelne Pizzastücke. Wir schneiden also die eine Pizza in fünf Teile. Dann bekommt jedes Haus ein Teil davon.<p class="vspace"></p><img  src="../res/Z2-gfx/Pizza.png" width="600px" height="auto"></img><br />Jetzt müsste es doch eine Zahl geben, die angibt, wie viele Pizzen jedes Haus bekommt. Und tatsächlich gibt es sie.<br />Diese Zahl heißt "ein Fünftel" und wird (von mir) so geschrieben: "⌜5" (man kann dazu "Ecke fünf" sagen).<p class="vspace"></p>Wir erkennen, dass ein Fünftel zwischen Null und Eins liegen muss, denn es ist ja mehr als keine Pizza, aber auch weniger als eine Pizza.<p class="vspace"></p><h4> Eins</h4>Wenn wir nur ein Haus haben, bekommt das ja die ganze Pizza, also<br /><div class="boxed">⌜1 = 1</div>Die eins ist also auch von der "Kante" das neutrale Element.<p class="vspace"></p><h4> Mehrere Pizzen</h4>Sagen wir, wir müssen mehr als eine Pizza verteilen, zum Beispiel drei. Wie viel bekommt jetzt jedes Haus?<br />Die Antwort erhält man wie folgt: Wir legen erst alle Pizzen bis auf eine beiseite. Dann verteilen wir die eine Pizza auf die Häuser.<br />Das gleiche machen wir dann mit der nächsten Pizza und auch mit der dritten. Am Ende haben wir alle Pizzen verteilt und wie viele Pizzen hat jedes Haus bekommen?<br />Nun, da wir drei mal ein Fünftel auf jedes Haus verteilt haben, ist die Antwort "3 • ⌜5". Auch dies ist eine neue Zahl, die wir erstmal nicht anders schreiben können.<br />Aber intuitiv ergibt es Sinn: wir legen drei dieser Fünftel zusammen und haben damit eine neue Zahl, die dreimal so groß ist, aber immer noch kleiner als Eins.<p class="vspace"></p>Was, wenn wir wollen, dass jedes Haus eine Pizza bekommt? Dann brauchen wir natürlich fünf Pizzen. Aber, wenn wir die gleiche Logik von eben anwenden, müsste jedes Haus "5 • ⌜5" Pizzen bekommen.<br />Dies lässt nur einen Schluss zu, und zwar:<br /><div class="boxed">5 • ⌜5 = 1</div>Dieser Fakt gilt für jede Zahl, nicht nur die fünf.<p class="vspace"></p>Wenn wir das ganze jetzt weiter analysieren, stellen wir fest, dass 10 • ⌜5 = (2 • 5) • ⌜5 ist.<br />Weil Multiplikation ja immer noch, auch mit diesen neuen Zahlen, Assoziativ sein soll, können wir sagen, dass dann das folgende gilt.<br /><div class="boxed">10 • ⌜5 = (2 • 5) • ⌜5 = 2 • (5 • ⌜5) = 2 • 1 = 2</div>Nach dem gleichen Muster gilt dann also "15 • ⌜5 = 3" und so weiter.<p class="vspace"></p>Andere Produkte können wir mit der Distributivität vereinfachen:<br /><div class="boxed">13 • ⌜5 = (10 + 3) • ⌜5 = (10 • ⌜5) + (3 • ⌜5) = 2 + (3 • ⌜5)</div>Die Zahl "2 + (3 • ⌜5)" lässt sich leider nicht einfacher schreiben (man könnte sogar behaupten, "13 • ⌜5" wäre einfacher und damit gar nicht mal falsch liegen) aber diese Schreibweise lässt einen auf den ersten Blick sehen, dass die Zahl zwischen zwei und drei liegt.<p class="vspace"></p><h4> Null</h4>Wenn wir keine Häuser haben, wie viele Pizzen bekommt jedes Haus?<br />Diese Frage ergibt keinen Sinn, da es keine Häuser gibt, an die man Pizzen verteilen könnte.<p class="vspace"></p>Ganz egal, welchen Wert man dem geben wollte, es wäre nicht richtig. Der Grund dafür ist folgender.<br />Wir haben ja festgestellt, dass "5 • ⌜5 = 1" ist und dass man hier die 5 gegen jede andere Zahl austauschen könnte.<br />Das hieße aber, dass "0 • ⌜0 = 1" gelten müsste. Aber auf der linken Seite steht ja ein Produkt mit Null. Wir erinnern uns: Ein Produkt mit Null ist immer Null. Damit diese Gleichung erfüllt wäre, müsste Null also gleich Eins sein.<br />Das kann und wird nicht funktionieren, wir hatten ja gesagt, Eins sei größer als Null. Darum kann es keine Zahl "⌜0" geben.<p class="vspace"></p><h4> Pizzen und Häuser gleichermaßen</h4>Wenn wir doppelt so viele Pizzen auf doppelt so viele Häuser verteilen, bekommt jedes Haus trotzdem noch so viel wie vorher.<br />Das kann man sich leicht vorstellen und es funktioniert auch mit dreimal, viermal oder jeder anderen Vervielfachung von Häusern und Pizzen zugleich.<p class="vspace"></p>Wenn wir also 2 Pizzen auf 10 Häuser verteilen, ist es genau so als würden wir eine Pizza auf 5 Häuser verteilen.<br />Wir halten fest:<br /><div class="boxed">2 • ⌜10 = 1 • ⌜5</div>Wenn wir das ganze verdreifachen, erhalten wir<br /><div class="boxed">3 • ⌜15 = 1 • ⌜5</div>Nach dem selben Muster geht es für immer weiter.<br />(Wer das Muster nicht erkennt, der bemerke: "2 • ⌜10 = 2 • ⌜(2 • 5)" und "3 • ⌜15 = 3 • ⌜(3 • 5)")<p class="vspace"></p><h4> Übliche Schreibweise</h4>Es ist so weit. Wir können leider nicht ewig im schönen Traumland der "Ecke" bleiben.<br />Die tatsächliche Schreibweise für Anteile kann leicht in die Irre führen.<br />Hier ist sie.<p class="vspace"></p>Erstens wird "⌜5 = 1/5", "⌜3 = 1/3", ... geschrieben.<br />Dann ist es natürlich logisch, und auch nicht falsch, dass man "3 • ⌜5" als "3 • 1/5" schreibt.<br /><b >Aber</b> man schreibt dies viel öfter als "3/5".<p class="vspace"></p><div class="boxed">Ich werde ab jetzt trotzdem immer noch mit einem Fuß im Land der Ecke stehen bleiben. Meiner Meinung nach lassen sich die Prinzipien mit der Ecke viel besser darstellen.</div><br />Was ich bisher nur "Anteile" oder "Zahlen zwischen Null und Eins" gennant habe, hat einen Speziellen Namen: <b >Brüche</b>.<br />Diesen Namen finde ich nicht gut, da er verheimlicht, dass diese Zahlen auch einfach nur Zahlen sind.<p class="vspace"></p>In dem Bruch "3/5" wird "3" als <b >Zähler</b> und "5" als <b >Nenner</b> bezeichnet.<p class="vspace"></p>Das vervielfachen von Pizzen und Häusern zugleich hat auch einen eigenen Namen: <b >Erweitern</b>.<br />Als Beispiel: "1 • ⌜5 = 3 • ⌜15" schreibt man als<br /><div class="boxed">1/5 = 3/15</div>Das ist zwar kürzer, versteckt aber die wirkliche Funktion dahinter.<br />Das Muster, dass ich vorher nicht erklärt habe, ist übrigens, den Nenner und Zähler immer mit der gleichen Zahl zu multiplizieren.<br />Ich habe damit bis jetzt gewartet, weil man hierfür doch die Begriffe Nenner und Zähler braucht und ich nicht noch mehr eigene Begriffe erfinden wollte.<p class="vspace"></p><h4> Die Menge der Bruchzahlen<br /><span style="font-weight: normal; font-size: 200%; margin-left:5pt">𝔹</span></h4>> Auch dieser Mengenname ist von mir erfunden<br />Diese Menge enthält alle Zahlen, die wir bisher kennen, also alle natürlichen Zahlen und alle Anteile (auch deren Vielfache).<br />Ich will es noch mal deutlich sagen: <b >Alle Zahlen sind hier gleichberechtigt</b>.<br />Nur weil die natürlichen Zahlen einfacher zu benutzen und verstehen sind, heißt das nicht, dass sie mathematisch irgendwas von den Anteilszahlen unterscheidet.<p class="vspace"></p>Nun wollen wir sehen, wie man alle unsere neuen und alten Zahlen addiert und multipliziert (wie man zwei natürliche Zahlen addiert/multipliziert, wissen wir ja schon).<p class="vspace"></p><h4> Addition</h4>Wenn die Zahl unter der Ecke gleich ist, ist es einfach.<br /><div class="boxed">⌜5 + ⌜5 = 2 • ⌜5</div>> 1/5 + 1/5 = 2/5<br />Dies liegt einfach daran, wie die Multiplikation funktioniert (wie sie <i >definiert ist</i>).<p class="vspace"></p>Mit Vielfachen ist es auch einfach, wir brauchen nur die Distributivität.<br /><div class="boxed">(3 • ⌜5) + (8 • ⌜5) = (3 + 8) • ⌜5 = 12 • ⌜5</div>> 3/5 + 8/5 = (3+8)/5 = 12/5<br />Hier sieht man ein Beispiel dafür, wie die Bruchschreibweise wichtige Vorkommnisse (das Verwenden der Distributivität) versteckt.<p class="vspace"></p>Wenn wir aber zwei verschiedene Zahlen unter der Ecke (Nenner) haben, was machen wir dann?<br />Wir erweitern. Und das jeweils mit einer anderen Zahl, sodass beide Nenner gleich sind.<br /><div class="boxed">⌜2 + ⌜3 = (3 • ⌜6) + (2 • ⌜6) = 5 • ⌜6</div>> 1/2 + 1/3 = 3/6 + 2/6 = 5/6<p class="vspace"></p>Als Faustregel, um die Zahl zu wählen, mit der man jeden Bruch erweitert, gilt folgendes.<br />Man nehme immer den Nenner des jeweils anderen Bruches. Diese Regel funktioniert immer und ist nie falsch, auch wenn es manchmal noch kleinere Möglichkeiten gibt.<br />Hier ein Beispiel:<br /><div class="boxed">⌜2 + ⌜6 = (6 • ⌜12) + (2 • ⌜12) = 8 • ⌜12</div>> 1/2 + 1/6 = 6/12 + 2/12 = 8/12<br />Besonders aufmerksame Leser werden feststellen, dass "8 • ⌜12 = 4 • ⌜6" ("8/12 = 4/6").<br />In der Tat wäre folgendes einfacher gewesen.<br /><div class="boxed">⌜2 + ⌜6 = (3 • ⌜6) + (1 • ⌜6) = 4 • ⌜6</div>> 1/2 + 1/6 = 3/6 + 1/6 = 4/6<br />Aber selbst das, was die einfachstmögliche Methode ist, liefert noch ein erweitertes Ergebnis.<br />Denn "4 • ⌜6 = 2 • ⌜3". Man muss* also so oder so am Ende noch "ent-erweitern". Wie das geht, kommt später.<p class="vspace"></p>*) Man muss es natürlich nicht, aber man will ja meistens das einfachste Ergebnis haben, z.B. um damit weiterzurechnen<p class="vspace"></p><h4> Multiplikation</h4><img  src="../res/Z2-gfx/../Baustelle.png" width="600px" height="auto"></img>Diese Sektion ist noch nicht fertig.<br />
+		Letztes Mal haben wir alles (viel) über natürliche Zahlen, Nachfolger, Addition, Multiplikation und Primzahlen gelernt.<br />
+Nun wollen wir uns mit Zahlen befassen, die zwischen den natürlichen Zahlen liegen.<br />
+Meine Herangehensweise wird etwas anders sein als es in Schulen getan wird. Das hat damit zu tun, dass ich es so für besser halte.<br />
+Ich will noch eine Warnung aussprechen: Ich habe hierfür ein paar Schreibweisen erfunden. Ich werde natürlich auch die üblichen Schreibweisen einführen, aber das eben erst etwas später.<br />
+<br />
+<h3>Anteile</h3><br />
+Für diesen Abschnitt sind wir Pizzalieferanten eines eher unkonventionellen Pizzarestaurants.<br />
+Gehen wir davon aus, wir wollen eine Pizza auf eine bestimmte Zahl von Häusern verteilen, hier sind es als Beispiel fünf.<br />
+Wie soll das gehen? Wir haben ja nur eine Pizza. Da kommt unser Arbeitgeber ins Spiel. Die verkaufen nämlich Pizzen jeder erdenklichen Größe, also auch einzelne Pizzastücke. Wir schneiden also die eine Pizza in fünf Teile. Dann bekommt jedes Haus ein Teil davon.<br />
+<br />
+<img src="../res/Z2-gfx/Pizza.png"  width="600px"></img><br />
+<br />
+Jetzt müsste es doch eine Zahl geben, die angibt, wie viele Pizzen jedes Haus bekommt. Und tatsächlich gibt es sie.<br />
+Diese Zahl heißt "ein Fünftel" und wird (von mir) so geschrieben: "⌜5" (man kann dazu "Ecke fünf" sagen).<br />
+<br />
+Wir erkennen, dass ein Fünftel zwischen Null und Eins liegen muss, denn es ist ja mehr als keine Pizza, aber auch weniger als eine Pizza.<br />
+<br />
+<h4>Eins</h4><br />
+Wenn wir nur ein Haus haben, bekommt das ja die ganze Pizza, also<br />
+<div class="boxed">⌜1 = 1</div><br />
+Die eins ist also auch von der "Kante" das neutrale Element.<br />
+<br />
+<h4>Mehrere Pizzen</h4><br />
+Sagen wir, wir müssen mehr als eine Pizza verteilen, zum Beispiel drei. Wie viel bekommt jetzt jedes Haus?<br />
+Die Antwort erhält man wie folgt: Wir legen erst alle Pizzen bis auf eine beiseite. Dann verteilen wir die eine Pizza auf die Häuser.<br />
+Das gleiche machen wir dann mit der nächsten Pizza und auch mit der dritten. Am Ende haben wir alle Pizzen verteilt und wie viele Pizzen hat jedes Haus bekommen?<br />
+Nun, da wir drei mal ein Fünftel auf jedes Haus verteilt haben, ist die Antwort "3 • ⌜5". Auch dies ist eine neue Zahl, die wir erstmal nicht anders schreiben können.<br />
+Aber intuitiv ergibt es Sinn: wir legen drei dieser Fünftel zusammen und haben damit eine neue Zahl, die dreimal so groß ist, aber immer noch kleiner als Eins.<br />
+<br />
+Was, wenn wir wollen, dass jedes Haus eine Pizza bekommt? Dann brauchen wir natürlich fünf Pizzen. Aber, wenn wir die gleiche Logik von eben anwenden, müsste jedes Haus "5 • ⌜5" Pizzen bekommen.<br />
+Dies lässt nur einen Schluss zu, und zwar:<br />
+<div class="boxed">5 • ⌜5 = 1</div><br />
+Dieser Fakt gilt für jede Zahl, nicht nur die fünf.<br />
+<br />
+Wenn wir das ganze jetzt weiter analysieren, stellen wir fest, dass 10 • ⌜5 = (2 • 5) • ⌜5 ist.<br />
+Weil Multiplikation ja immer noch, auch mit diesen neuen Zahlen, Assoziativ sein soll, können wir sagen, dass dann das folgende gilt.<br />
+<div class="boxed">10 • ⌜5 = (2 • 5) • ⌜5 = 2 • (5 • ⌜5) = 2 • 1 = 2</div><br />
+Nach dem gleichen Muster gilt dann also "15 • ⌜5 = 3" und so weiter.<br />
+<br />
+Andere Produkte können wir mit der Distributivität vereinfachen:<br />
+<div class="boxed">13 • ⌜5 = (10 + 3) • ⌜5 = (10 • ⌜5) + (3 • ⌜5) = 2 + (3 • ⌜5)</div><br />
+Die Zahl "2 + (3 • ⌜5)" lässt sich leider nicht einfacher schreiben (man könnte sogar behaupten, "13 • ⌜5" wäre einfacher und damit gar nicht mal falsch liegen) aber diese Schreibweise lässt einen auf den ersten Blick sehen, dass die Zahl zwischen zwei und drei liegt.<br />
+<br />
+<h4>Null</h4><br />
+Wenn wir keine Häuser haben, wie viele Pizzen bekommt jedes Haus?<br />
+Diese Frage ergibt keinen Sinn, da es keine Häuser gibt, an die man Pizzen verteilen könnte.<br />
+<br />
+Ganz egal, welchen Wert man dem geben wollte, es wäre nicht richtig. Der Grund dafür ist folgender.<br />
+Wir haben ja festgestellt, dass "5 • ⌜5 = 1" ist und dass man hier die 5 gegen jede andere Zahl austauschen könnte.<br />
+Das hieße aber, dass "0 • ⌜0 = 1" gelten müsste. Aber auf der linken Seite steht ja ein Produkt mit Null. Wir erinnern uns: Ein Produkt mit Null ist immer Null. Damit diese Gleichung erfüllt wäre, müsste Null also gleich Eins sein.<br />
+Das kann und wird nicht funktionieren, wir hatten ja gesagt, Eins sei größer als Null. Darum kann es keine Zahl "⌜0" geben.<br />
+<br />
+<h4>Pizzen und Häuser gleichermaßen</h4><br />
+Wenn wir doppelt so viele Pizzen auf doppelt so viele Häuser verteilen, bekommt jedes Haus trotzdem noch so viel wie vorher.<br />
+Das kann man sich leicht vorstellen und es funktioniert auch mit dreimal, viermal oder jeder anderen Vervielfachung von Häusern und Pizzen zugleich.<br />
+<br />
+Wenn wir also 2 Pizzen auf 10 Häuser verteilen, ist es genau so als würden wir eine Pizza auf 5 Häuser verteilen.<br />
+Wir halten fest:<br />
+<div class="boxed">2 • ⌜10 = 1 • ⌜5</div><br />
+Wenn wir das ganze verdreifachen, erhalten wir<br />
+<div class="boxed">3 • ⌜15 = 1 • ⌜5</div><br />
+Nach dem selben Muster geht es für immer weiter.<br />
+(Wer das Muster nicht erkennt, der bemerke: "2 • ⌜10 = 2 • ⌜(2 • 5)" und "3 • ⌜15 = 3 • ⌜(3 • 5)")<br />
+<br />
+<h4>Übliche Schreibweise</h4><br />
+Es ist so weit. Wir können leider nicht ewig im schönen Traumland der "Ecke" bleiben.<br />
+Die tatsächliche Schreibweise für Anteile kann leicht in die Irre führen.<br />
+Hier ist sie.<br />
+<br />
+Erstens wird "⌜5 = 1/5", "⌜3 = 1/3", ... geschrieben.<br />
+Dann ist es natürlich logisch, und auch nicht falsch, dass man "3 • ⌜5" als "3 • 1/5" schreibt.<br />
+<b>Aber</b> man schreibt dies viel öfter als "3/5".<br />
+<br />
+<div class="boxed">Ich werde ab jetzt trotzdem immer noch mit einem Fuß im Land der Ecke stehen bleiben. Meiner Meinung nach lassen sich die Prinzipien mit der Ecke viel besser darstellen.</div><br />
+<br />
+Was ich bisher nur "Anteile" oder "Zahlen zwischen Null und Eins" gennant habe, hat einen Speziellen Namen: <b>Brüche</b>.<br />
+Diesen Namen finde ich nicht gut, da er verheimlicht, dass diese Zahlen auch einfach nur Zahlen sind.<br />
+<br />
+In dem Bruch "3/5" wird "3" als <b>Zähler</b> und "5" als <b>Nenner</b> bezeichnet.<br />
+<br />
+Das vervielfachen von Pizzen und Häusern zugleich hat auch einen eigenen Namen: <b>Erweitern</b>.<br />
+Als Beispiel: "1 • ⌜5 = 3 • ⌜15" schreibt man als<br />
+<div class="boxed">1/5 = 3/15</div><br />
+Das ist zwar kürzer, versteckt aber die wirkliche Funktion dahinter.<br />
+Das Muster, dass ich vorher nicht erklärt habe, ist übrigens, den Nenner und Zähler immer mit der gleichen Zahl zu multiplizieren.<br />
+Ich habe damit bis jetzt gewartet, weil man hierfür doch die Begriffe Nenner und Zähler braucht und ich nicht noch mehr eigene Begriffe erfinden wollte.<br />
+<br />
+<h4>Die Menge der Bruchzahlen<br /> <span style="font-weight: normal; font-size: 200%; margin-left:5pt">𝔹</span></h4><br />
+<div class="boxed">Auch dieser Mengenname ist von mir erfunden</div><br />
+Diese Menge enthält alle Zahlen, die wir bisher kennen, also alle natürlichen Zahlen und alle Anteile (auch deren Vielfache).<br />
+Ich will es noch mal deutlich sagen: <b>Alle Zahlen sind hier gleichberechtigt</b>.<br />
+Nur weil die natürlichen Zahlen einfacher zu benutzen und verstehen sind, heißt das nicht, dass sie mathematisch irgendwas von den Anteilszahlen unterscheidet.<br />
+<br />
+Nun wollen wir sehen, wie man alle unsere neuen und alten Zahlen addiert und multipliziert (wie man zwei natürliche Zahlen addiert/multipliziert, wissen wir ja schon).<br />
+<br />
+<h4>Addition</h4><br />
+Wenn die Zahl unter der Ecke gleich ist, ist es einfach.<br />
+<div class="boxed">⌜5 + ⌜5 = 2 • ⌜5</div><br />
+<div class="boxed">1/5 + 1/5 = 2/5</div><br />
+Dies liegt einfach daran, wie die Multiplikation funktioniert (wie sie <i>definiert ist</i>).<br />
+<br />
+Mit Vielfachen ist es auch einfach, wir brauchen nur die Distributivität.<br />
+<div class="boxed">(3 • ⌜5) + (8 • ⌜5) = (3 + 8) • ⌜5 = 12 • ⌜5</div><br />
+<div class="boxed">3/5 + 8/5 = (3+8)/5 = 12/5</div><br />
+Hier sieht man ein Beispiel dafür, wie die Bruchschreibweise wichtige Vorkommnisse (das Verwenden der Distributivität) versteckt.<br />
+<br />
+Wenn wir aber zwei verschiedene Zahlen unter der Ecke (Nenner) haben, was machen wir dann?<br />
+Wir erweitern. Und das jeweils mit einer anderen Zahl, sodass beide Nenner gleich sind.<br />
+<div class="boxed">⌜2 + ⌜3 = (3 • ⌜6) + (2 • ⌜6) = 5 • ⌜6</div><br />
+<div class="boxed">1/2 + 1/3 = 3/6 + 2/6 = 5/6</div><br />
+<br />
+Als Faustregel, um die Zahl zu wählen, mit der man jeden Bruch erweitert, gilt folgendes.<br />
+Man nehme immer den Nenner des jeweils anderen Bruches. Diese Regel funktioniert immer und ist nie falsch, auch wenn es manchmal noch kleinere Möglichkeiten gibt.<br />
+Hier ein Beispiel:<br />
+<div class="boxed">⌜2 + ⌜6 = (6 • ⌜12) + (2 • ⌜12) = 8 • ⌜12</div><br />
+<div class="boxed">1/2 + 1/6 = 6/12 + 2/12 = 8/12</div><br />
+Besonders aufmerksame Leser werden feststellen, dass "8 • ⌜12 = 4 • ⌜6" ("8/12 = 4/6").<br />
+In der Tat wäre folgendes einfacher gewesen.<br />
+<div class="boxed">⌜2 + ⌜6 = (3 • ⌜6) + (1 • ⌜6) = 4 • ⌜6</div><br />
+<div class="boxed">1/2 + 1/6 = 3/6 + 1/6 = 4/6</div><br />
+Aber selbst das, was die einfachstmögliche Methode ist, liefert noch ein erweitertes Ergebnis.<br />
+Denn "4 • ⌜6 = 2 • ⌜3". Man muss* also so oder so am Ende noch "ent-erweitern". Wie das geht, kommt später.<br />
+<br />
+*) Man muss es natürlich nicht, aber man will ja meistens das einfachste Ergebnis haben, z.B. um damit weiterzurechnen<br />
+<br />
+<h4>Multiplikation</h4><br />
+<img src="../res/Baustelle.png"  width="600px"></img><br />
+Diese Sektion ist noch nicht fertig.<br />
+
 	</div>
 	<div id="footer">
 		<a class="return" href="../index.html" style="margin-right: 10pt">Return to index</a>

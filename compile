@@ -1,1 +1,3 @@
-python compiler.py
+# the `baml_html` command is developed by me. 
+baml_html --template index_template.html --output-dir . --dry-run index
+baml_html --template post_template.html --output-dir post $(find src -name "*.baml")
