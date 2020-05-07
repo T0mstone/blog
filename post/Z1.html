@@ -13,8 +13,8 @@
 	</div>
 	<div id="menu">
 		<a class="return" href="../index.html" style="margin-right: 10pt">Return to index</a>
-		<a id="setting-lightmode" href="?dark=0" style="color: #559">Light Mode</a>
-		<a id="setting-darkmode" href="?dark=1" style="color: #33d">Dark Mode</a>
+		<a id="setting-lightmode" onclick="setDarkMode(false);" style="color: var(--special-link-color)">Light Mode</a>
+		<a id="setting-darkmode" onclick="setDarkMode(true);" style="color: var(--special-link-color)">Dark Mode</a>
 	</div>
 	<div class="content">
 		Zahlen entstanden vor langer Zeit, um Dinge zu zählen.<br />
@@ -134,8 +134,8 @@ Man kann sich dies (siehe Grafik) als ein Rechteck vorstellen, bei dem man sowoh
 Außerdem ist die Multiplikation auch Assoziativ.<br />
 Dies lässt sich ähnlich in 3D darstellen, indem man einen Quader unterteilt (siehe Grafik)<br />
 <br />
-<img  width="600px" src="../res/Z1-gfx/MulAssoc1.png"></img><br />
-<img  style="margin-right: 10px; margin-left: 5px" src="../res/Z1-gfx/MulAssoc2.png"  width="290px"></img><img src="../res/Z1-gfx/MulAssoc3.png"  width="290px"></img><br />
+<img src="../res/Z1-gfx/MulAssoc1.png"  width="600px"></img><br />
+<img  width="290px" src="../res/Z1-gfx/MulAssoc2.png"  style="margin-right: 10px; margin-left: 5px"></img><img  width="290px" src="../res/Z1-gfx/MulAssoc3.png"></img><br />
 Grafik - Assoziativgesetz: (3 • 2) • 4 = 3 • (2 • 4) = 3 • 2 • 4<br />
 <br />
 Die Multiplikation hat auch noch eine dritte Eigenschaft.<br />
@@ -149,7 +149,7 @@ Auch diese Eigenschaft liegt nicht an den Zahlen 1, 2 und 3. Auch dies geht mit 
 <br />
 Diese Regel wird anhand der folgenden Grafik illustriert<br />
 <br />
-<img  width="600px" src="../res/Z1-gfx/MulDist.png"></img><br />
+<img src="../res/Z1-gfx/MulDist.png"  width="600px"></img><br />
 <br />
 <h3>Primzahlen und Zerlegung</h3><br />
 Zahlen wie 4 können als Produkt geschrieben werden, ohne dabei die 1 oder die Zahl selbst zu verwenden: "4 = 2 • 2".<br />

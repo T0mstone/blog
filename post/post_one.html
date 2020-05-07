@@ -13,8 +13,8 @@
 	</div>
 	<div id="menu">
 		<a class="return" href="../index.html" style="margin-right: 10pt">Return to index</a>
-		<a id="setting-lightmode" href="?dark=0" style="color: #559">Light Mode</a>
-		<a id="setting-darkmode" href="?dark=1" style="color: #33d">Dark Mode</a>
+		<a id="setting-lightmode" onclick="setDarkMode(false);" style="color: var(--special-link-color)">Light Mode</a>
+		<a id="setting-darkmode" onclick="setDarkMode(true);" style="color: var(--special-link-color)">Dark Mode</a>
 	</div>
 	<div class="content">
 		This is my first blog post. Today I had the idea "Hey, I could write a blog."<br />

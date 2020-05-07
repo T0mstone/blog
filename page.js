@@ -16,34 +16,56 @@ function mapGetElementsByClass(cls, map) {
 	}
 }
 
-function setDarkMode() {
-	const dark = urlParams.get('dark') == '1';
+function setDarkModeFromUrl() {
+	let dark = urlParams.get('dark');
+	if (dark == '1') {
+		setDarkMode(true);
+	} else if (dark == '0') {
+		setDarkMode(false);
+	}
+}
 
-	const DARK_BG = '#101510';
-	const LIGHT_BG = '#ded';
-	const DARK_TEXT = '#993';
-	const LIGHT_TEXT = '#000';
+function setDarkMode(dark) {
+	window.localStorage.setItem('dark', dark.toString());
+	applyDarkMode();
+}
 
-	document.body.style.backgroundColor = dark? DARK_BG : LIGHT_BG;
-	document.body.style.color = dark? DARK_TEXT : LIGHT_TEXT;
+function applyDarkMode() {
+	let dark = {"true": true, "false": false, null: false}[window.localStorage.getItem('dark')];
+
+	const VARS = {
+		'background-color': ['#ded', '#101510'],
+		'text-color': ['#000', '#993'],
+		'special-link-color': ['#33d', '#559'],
+		'faint': ['#888', '#555'],
+		'menu-bg': ['#bbb5', '#aaaaaa19'],
+		'boxed-bg': ['#aaa4', '#aaa2'],
+		'boxed-stripe': ['rgba(0, 0, 0, 0.05)', 'rgba(255, 255, 255, 0.1)'],
+	};
+
+	let html = document.getElementsByTagName('html')[0];
+	for (var key in VARS) {
+		console.log(VARS, VARS[key], VARS[key][+dark]);
+		html.style.setProperty('--' + key, VARS[key][+dark]);
+	}
+
 	mapGetElementById('posts', posts => {
 		for (p of posts.children) {
 			for (c of p.children) {
 				if (c.tagName == 'A') {
-					c.style.color = dark? DARK_TEXT : LIGHT_TEXT;
-					c.href = c.href.split('?')[0] + document.location.search;
+					c.href = c.href.split('?')[0] + '?dark=' + (+dark).toString();
 				}
 			}
 		}
 	});
 	mapGetElementsByClass('return', x => { 
-		x.href = x.href.split('?')[0] + document.location.search;
-		x.style.color = dark? '#559' : '#33d';
+		x.href = x.href.split('?')[0] + '?dark=' + (+dark).toString();
 	});
 	mapGetElementById('setting-darkmode', x => { x.style.display = dark? 'none' : '' });
 	mapGetElementById('setting-lightmode', x => { x.style.display = dark? '' : 'none' });
-	mapGetElementById('menu', x => { x.style.backgroundColor = dark? '#aaaaaa19' : '#bbb5' });
-	mapGetElementById('footer', x => { x.style.backgroundColor = dark? '#aaaaaa19' : '#bbb5' });
 }
 
-window.onload = () => setDarkMode()
+window.addEventListener('load', () => {
+	setDarkModeFromUrl();
+	applyDarkMode();
+});

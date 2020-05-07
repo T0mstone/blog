@@ -99,7 +99,7 @@ Das ist zwar kürzer, versteckt aber die wirkliche Funktion dahinter.
 Das Muster, dass ich vorher nicht erklärt habe, ist übrigens, den Nenner und Zähler immer mit der gleichen Zahl zu multiplizieren.
 Ich habe damit bis jetzt gewartet, weil man hierfür doch die Begriffe Nenner und Zähler braucht und ich nicht noch mehr eigene Begriffe erfinden wollte.
 
-.h4 Die Menge der Bruchzahlen<br />[span{style = font-weight: normal\; font-size: 200%perc\; margin-left:5pt} 𝔹]
+.h4 Die Menge der Bruchzahlen<br />[span{style = font-weight: normal\; font-size: 200%\; margin-left:5pt} 𝔹]
 .div{class = boxed} Auch dieser Mengenname ist von mir erfunden
 Diese Menge enthält alle Zahlen, die wir bisher kennen, also alle natürlichen Zahlen und alle Anteile (auch deren Vielfache).
 Ich will es noch mal deutlich sagen: [b Alle Zahlen sind hier gleichberechtigt].

@@ -19,7 +19,7 @@ Wie man sieht, gibt es hierzu also keine eindeutige Antwort (wie das bei vielen 
 Ob Zahlen nun Ausgedacht sind oder nicht, wir können sie benutzen. Dafür müssen wir zwar wissen, \
 was Zahlen sind und welche es gibt, doch genau das werden wir jetzt lernen.
 
-.h3 Die Natürlichen Zahlen[br][span{style = font-weight: normal\; font-size: 200%perc\; margin-left:5pt} ℕ]
+.h3 Die Natürlichen Zahlen[br][span{style = font-weight: normal\; font-size: 200%\; margin-left:5pt} ℕ]
 Das Symbol ℕ steht für die "Gruppe" aller Kardinalzahlen (Zählzahlen). Hiermit kann man also Dinge zählen.
 Man kann sie aber auch als Ordinalzahlen interpretieren. Für Menschen ist dieses Umdenken ganz natürlich: \
 Aus 1 wird Platz 1 (der erste), aus 2 wird Platz 2, usw.

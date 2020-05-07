@@ -10,20 +10,20 @@
 	<div class="title">
 		<h1>Tom's Blog</h1>
 		<center class="faint">
-			%run(python get_quote.py)
+			(%run python scripts/get_quote.py%)
 		</center>
 	</div>
 	<div id="menu">
-		<a id="setting-lightmode" href="?dark=0" style="color: #559">Light Mode</a>
-		<a id="setting-darkmode" href="?dark=1" style="color: #33d">Dark Mode</a>
+		<a id="setting-lightmode" onclick="setDarkMode(false);" style="color: var(--special-link-color)">Light Mode</a>
+		<a id="setting-darkmode" onclick="setDarkMode(true);" style="color: var(--special-link-color)">Dark Mode</a>
 	</div>
 	<div>
 		<div id="posts">
-			%forfiles(with f:in src:exclude_name _*:include_name *.baml:sort_key %{!n}:sort_order -)%(
+			(%for f in (%sort_by f - (%file_meta (%f%)\:n%):(%lsdir src:exclude_names _*:include_only_names *.baml%)%);
 				<p class="post-link">
-					[%run(python make_flag.py %{!lang})] (%{!n})
-					<a href="post/%setext(html:%{f})">
-						%{!title}
+					[(%run python scripts/make_flag.py (%file_meta (%f%):lang%)%)] ((%file_meta (%f%):n%))
+					<a href="post/(%re_sub .+/([^/]*)([^/.])\.[^/.]*$:$1$2.html:(%f%)%)">
+						(%file_meta (%f%):title%)
 					</a>
 				</p>
 			%)

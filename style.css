@@ -1,5 +1,6 @@
 body {
-	background-color: #ded;
+	background-color: var(--background-color);
+	color: var(--text-color);
 }
 
 a {
@@ -22,7 +23,7 @@ p .vspace {
 }
 
 #posts a {
-	color: #000;
+	color: var(--text-color);
 }
 
 .title {
@@ -44,13 +45,15 @@ p .vspace {
 }
 
 .faint {
-	color: #888;
+	color: var(--faint);
 }
 
 .boxed {
+	border-left: solid 5pt var(--boxed-stripe);
 	text-align: center;
-	background-color: #aaa6;
-	border-radius: 5px;
+	background-color: var(--boxed-bg);
+	border-radius: 1px;
+	padding: 0.3em;
 }
 
 .content, #menu, #footer {
@@ -63,6 +66,10 @@ p .vspace {
 	padding-top: 5pt;
 	padding-bottom: 5pt;
 	margin-bottom: 5pt;
-	background-color: #fff5;
-	border-radius: 15pt;
+	background-color: var(--menu-bg);
+	border-radius: 12pt;
+}
+
+.return {
+	color: var(--special-link-color);
 }
