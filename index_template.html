@@ -19,7 +19,7 @@
 	</div>
 	<div>
 		<div id="posts">
-			(%for f in (%sort_by f - (%file_meta (%f%)\:n%):(%lsdir src:exclude_names _*:include_only_names *.baml%)%);
+			(%for f in (%sort_by f - (%file_meta (%f%)\:n%):(%lsdir src:exclude_names _*:include_only_names *.baml%)%):
 				<p class="post-link">
 					[(%run python scripts/make_flag.py (%file_meta (%f%):lang%)%)] ((%file_meta (%f%):n%))
 					<a href="post/(%re_sub .+/([^/]*)([^/.])\.[^/.]*$:$1$2.html:(%f%)%)">
